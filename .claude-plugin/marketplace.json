@@ -1,0 +1,18 @@
+{
+  "name": "solo-works-marketplace",
+  "owner": {
+    "name": "Solo Works",
+    "url": "https://soloworks.app"
+  },
+  "metadata": {
+    "description": "Official Solo Works plugin marketplace for Claude"
+  },
+  "plugins": [
+    {
+      "name": "solo-works",
+      "description": "AI image editing powered by Solo Works — background removal, model replacement, style transfer, product photos, and more.",
+      "source": "./",
+      "homepage": "https://soloworks.app"
+    }
+  ]
+}
