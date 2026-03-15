@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "solo-works": {
+      "type": "http",
+      "url": "https://soloworks.app/api/mcp/mcp",
+      "headers": {
+        "Authorization": "Bearer ${SOLO_WORKS_API_KEY}"
+      }
+    }
+  }
+}
