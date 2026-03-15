@@ -1,36 +1,30 @@
 ---
-description: Set up Solo Works API access. Use when authentication fails, the user hasn't configured their API key, or asks how to get started with Solo Works.
+name: setup
+description: "Set up Solo Works connection. Use when authentication fails or the MCP server isn't connected."
+user-invocable: true
 ---
 
 # Solo Works Setup
 
-Help the user configure their Solo Works API key for AI image editing.
+Help the user connect their Solo Works account for AI image editing.
 
 ## Steps
 
-1. **Check if already configured:** Try calling `list_workflows`. If it succeeds, tell the user they're already set up and ask what they'd like to edit.
+1. **Check if already connected:** Try calling `list_workflows`. If it succeeds, tell the user they're already set up and ask what they'd like to edit.
 
-2. **If auth fails, guide setup:**
+2. **If not connected:**
 
-   a. "To use Solo Works AI image editing, you need an API key. Here's how to get one:"
+   a. "Solo Works connects automatically via OAuth. When you first try to use an editing tool, a browser window should open for you to log in."
 
-   b. **Register:** "Go to https://soloworks.app/auth/register to create an account (if you don't have one)."
+   b. "If the browser didn't open, try using the `/solo-works:edit-image` skill — it should trigger the connection flow."
 
-   c. **Get API Key:** "Go to https://soloworks.app/api-keys and click 'Create API Key'. Copy the key that starts with `sk_live_`."
-
-   d. **Set environment variable:** "Set the API key as an environment variable:
-      ```
-      export SOLO_WORKS_API_KEY=sk_live_your_key_here
-      ```
-      Add this to your shell profile (~/.zshrc or ~/.bashrc) to persist it."
-
-   e. **Restart Claude Code** after setting the env var.
+   c. "If you don't have an account yet, you can register at https://soloworks.app/auth/register"
 
 3. **Verify:** Call `list_workflows` to confirm the connection works. If successful, show the available workflows.
 
 4. **Credits:** "New accounts get 20 free credits. You can purchase more at https://soloworks.app/buy"
 
 ## Important
-- The API key format is `sk_live_` followed by a random string
-- All Solo Works tools require authentication — nothing works without a valid key
-- If the key is invalid or expired, guide the user to generate a new one
+- Authentication is handled automatically via OAuth — no API keys or terminal commands needed
+- If the connection fails, suggest the user restart Claude Desktop and try again
+- All Solo Works tools require authentication — the OAuth flow must complete first

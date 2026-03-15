@@ -8,32 +8,22 @@ Powered by [Solo Works](https://soloworks.app) AI platform.
 
 ### 1. Install the plugin
 
-From Claude Code:
+Add marketplace from GitHub in Claude Desktop: `sillyleo/solo-works-plugin`
+
+Or from Claude Code CLI:
 ```bash
-claude plugin install github:sillyleo/solo-works-plugin
+claude plugin install solo-works@solo-works-marketplace
 ```
 
-Or browse plugins in Claude Desktop Cowork and search for "Solo Works".
+### 2. Connect your account
 
-### 2. Get your API key
+When you first use an editing tool, Claude will automatically open a browser window for you to log in to Solo Works. No API keys or terminal commands needed.
 
-1. Create an account at [soloworks.app/auth/register](https://soloworks.app/auth/register)
-2. Go to [soloworks.app/api-keys](https://soloworks.app/api-keys)
-3. Click **Create API Key** and copy the key (starts with `sk_live_`)
-
-### 3. Set your API key
-
-```bash
-export SOLO_WORKS_API_KEY=sk_live_your_key_here
-```
-
-Add this to your `~/.zshrc` or `~/.bashrc` to persist it, then restart Claude.
-
-### 4. Start editing
+### 3. Start editing
 
 Just ask Claude to edit your images:
 
-> "Remove the background from this product photo: https://example.com/photo.jpg"
+> "Remove the background from this product photo"
 
 > "Replace the model in this fashion image with a different pose"
 
@@ -45,7 +35,7 @@ Just ask Claude to edit your images:
 |-------|---------|-------------|
 | Edit Image | `/solo-works:edit-image` | Full image editing workflow |
 | Check Credits | `/solo-works:check-credits` | View your credit balance |
-| Setup | `/solo-works:setup` | Configure API key |
+| Setup | `/solo-works:setup` | Connection help |
 
 ## How It Works
 
@@ -74,18 +64,14 @@ Each operation costs 1-8 credits depending on complexity. New accounts get **20 
 ## Troubleshooting
 
 **"Authentication required" error:**
-Run `/solo-works:setup` or check that `SOLO_WORKS_API_KEY` is set in your environment.
+Run `/solo-works:setup` for connection help.
 
 **"Insufficient credits" error:**
 Purchase more credits at [soloworks.app/buy](https://soloworks.app/buy).
 
-**Tool calls failing:**
-Make sure you've restarted Claude after setting the API key.
-
 ## Links
 
 - [Solo Works Platform](https://soloworks.app)
-- [API Key Management](https://soloworks.app/api-keys)
 - [Buy Credits](https://soloworks.app/buy)
 
 ## License

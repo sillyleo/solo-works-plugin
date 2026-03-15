@@ -1,5 +1,7 @@
 ---
-description: Check your Solo Works credits balance and get information about purchasing more credits. Use when the user asks about credits, balance, costs, or pricing.
+name: check-credits
+description: "Check your Solo Works credits balance and get information about purchasing more credits."
+user-invocable: true
 ---
 
 # Check Solo Works Credits

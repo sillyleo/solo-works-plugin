@@ -1,5 +1,8 @@
 ---
-description: Edit images using Solo Works AI workflows — background removal, model replacement, style transfer, lighting adjustment, product photos, and more. Use when the user wants to edit, transform, enhance, or process images.
+name: edit-image
+description: "Edit images using Solo Works AI workflows — background removal, model replacement, style transfer, lighting adjustment, product photos, and more."
+user-invocable: true
+argument-hint: [describe what edit you want]
 ---
 
 # AI Image Editing with Solo Works

@@ -1,9 +1,13 @@
 {
   "name": "solo-works",
-  "description": "AI image editing powered by Solo Works — background removal, model replacement, style transfer, product photos, and more.",
   "version": "1.0.0",
-  "author": { "name": "Solo Works" },
+  "description": "AI image editing powered by Solo Works — background removal, model replacement, style transfer, product photos, and more. One-click MCP server integration for Claude Code and Cowork.",
+  "author": {
+    "name": "Solo Works",
+    "url": "https://soloworks.app"
+  },
   "repository": "https://github.com/sillyleo/solo-works-plugin",
   "homepage": "https://soloworks.app",
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": ["image-editing", "ai", "background-removal", "style-transfer", "product-photos", "mcp"]
 }
